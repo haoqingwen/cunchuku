@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 布局</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .baiSe {
+            background-color: white;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .yinying {
+            box-shadow: 0em;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .mg8 {
+            margin: 8px;
+        }
+
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        .dh {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 1px solid#000;
+        }
+
+        @media(max-width: 600px) {
+            .cebian {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px" class="cebian baiSe">
+        <div class="dh">导航栏</div>
+        <div class="dh">导航栏</div>
+        <div class="dh">导航栏</div>
+        <div class="dh">导航栏</div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部栏-->
+        <div style="height: 60px" class="baiSe"></div>
+        <!--内容区-->
+        <div class="flex1 flex">
+            <!--左区-->
+            <div style="flex:3" class="flex column mg8">
+                <!--数据区-->
+                <div class="flex">
+                    <!--数据块-->
+                    <div style="height: 100px" class="flex1 baiSe mgr8"></div>
+                    <div style="height: 100px" class="flex1 baiSe mgr8"></div>
+                    <div style="height: 100px" class="flex1 baiSe mgr8"></div>
+                    <div style="height: 100px" class="flex1 baiSe"></div>
+                </div>
+                <!--列表区-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise"></div>
+                    <div style="height: 160px;" class="baise"></div>
+                    <div style="height: 160px;" class="baise"></div>
+
+                </div>
+            </div>
+            <!--右区-->
+            <div style="flex:1" class="flex column mgr8 mgt8">
+                <!--提示区-->
+                <div style="height: 150px" class="baiSe"></div>
+                <!--消息区-->
+                <div style="height: 300px" class="baiSe mgt8"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
